@@ -1,0 +1,51 @@
+<h1>Listing recipes</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>Picture</th>
+      <th>Serves</th>
+      <th>Preparationtime</th>
+      <th>Cookingtime</th>
+      <th>Author</th>
+      <th>Ingredients</th>
+      <th>Level</th>
+      <th>Description</th>
+      <th>Directions</th>
+      <th>Score</th>
+      <th>Ratingnum</th>
+      <th>Dateadded</th>
+      <th></th>
+      <th></th>
+      <th></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @recipes.each do |recipe| %>
+      <tr>
+        <td><%= recipe.name %></td>
+        <td><%= image_tag recipe.picture_url(:thumb) if recipe.picture? %></td>
+        <td><%= recipe.serves %></td>
+        <td><%= recipe.preparationtime %></td>
+        <td><%= recipe.cookingtime %></td>
+        <td><%= recipe.author %></td>
+        <td><%= recipe.ingredients %></td>
+        <td><%= recipe.level %></td>
+        <td><%= recipe.description %></td>
+        <td><%= recipe.directions %></td>
+        <td><%= recipe.score %></td>
+        <td><%= recipe.ratingnum %></td>
+        <td><%= recipe.dateadded %></td>
+        <td><%= link_to 'Show', recipe %></td>
+        <td><%= link_to 'Edit', edit_recipe_path(recipe) %></td>
+        <td><%= link_to 'Destroy', recipe, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Recipe', new_recipe_path %>

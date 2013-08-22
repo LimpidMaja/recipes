@@ -1,0 +1,31 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  name: MyString
+  picture: MyString
+  serves: 1
+  preparationtime: 1
+  cookingtime: 1
+  author: MyString
+  ingredients: MyText
+  level: 1
+  description: MyText
+  directions: MyText
+  score: 1
+  ratingnum: 1
+  dateadded: 2013-08-22 09:02:00
+
+two:
+  name: MyString
+  picture: MyString
+  serves: 1
+  preparationtime: 1
+  cookingtime: 1
+  author: MyString
+  ingredients: MyText
+  level: 1
+  description: MyText
+  directions: MyText
+  score: 1
+  ratingnum: 1
+  dateadded: 2013-08-22 09:02:00
